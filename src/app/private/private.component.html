@@ -1,0 +1,24 @@
+<section class="hero is-warning is-bold">
+    <div class="hero-body">
+    <div class="container">
+
+      <h1 class="title">Pagina Privada, solo con autentificación ㊙️ </h1>
+      <div *ngIf="userDetails">
+        <table class="table">
+          <thead>
+            <tr>
+              <th><abbr title="Identificador">Id</abbr></th>
+              <th>Usuario</th>
+              <th>E-mail</th>
+            </tr>
+            <tr>
+              <th>{{userDetails.id}}</th>
+              <th>{{userDetails.username}}</th>
+              <th>{{userDetails.email}}</th>
+            </tr>
+          </thead>
+       </table>
+      </div>
+    </div>
+    </div>
+  </section>

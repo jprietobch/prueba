@@ -1,0 +1,51 @@
+<nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="https://ww2.banchileinversiones.cl/">
+      <img src="../../assets/img/logo.png" width="135" height="35">
+    </a>
+
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item" routerLink="/home" >
+        Home
+      </a>
+      <a class="navbar-item" routerLink="/private">
+        Private
+      </a>
+      <a class="navbar-item" routerLink="/public">
+        Public
+      </a>
+
+      <a *ngIf="checkRole('AdminWeb')" class="navbar-item  is-light" routerLink="/admin">
+          Admin
+      </a>
+
+    </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div *ngIf="isLoggdIn()" class="buttons">
+          <a href="#" (click)="doLogout()" class="button is-black">
+           <strong>Log out</strong>
+          </a>
+        </div>
+      </div>
+
+      <div class="navbar-item">
+        <div *ngIf="!isLoggdIn()" class="buttons">
+          <a href="#" (click)="doLogin()" class="button is-light">
+            <strong>Log in</strong>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</nav>
