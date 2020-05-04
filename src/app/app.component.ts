@@ -1,57 +1,69 @@
 import { Component, OnInit } from '@angular/core';
-import { KeycloakProfile } from 'keycloak-js';
-import { KeycloakService } from 'keycloak-angular';
+
+// MSAL
+import { BroadcastService, MsalService } from '@azure/msal-angular';
+import { Logger, CryptoUtils } from 'msal';
+
+
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-
 export class AppComponent implements OnInit {
-
-  title = 'rhsoo-angular-bch';
+  title = 'pwa-angular-sin-ssr';
+  version = 'Angular version 9.0.5';
+  isIframe = false;
   loggedIn = false;
-  userDetails: KeycloakProfile;
-  userRoles: string [];
 
+  constructor(private broadcastService: BroadcastService,
+              private authService: MsalService) { }
 
-  constructor(private keycloakService: KeycloakService) {}
+  ngOnInit() {
+    this.isIframe = window !== window.parent && !window.opener;
 
-  async ngOnInit() {
+    this.checkoutAccount();
 
-    console.log('isLoggedIn:', this.keycloakService.isLoggedIn());
-    if (await this.keycloakService.isLoggedIn()) {
-      this.userDetails = await this.keycloakService.loadUserProfile();
-      this.userRoles = this.keycloakService.getUserRoles();
+    this.broadcastService.subscribe('msal:loginSuccess', () => {
+      this.checkoutAccount();
+    });
 
-      console.log('ngOnInit appComponent');
+    this.authService.handleRedirectCallback((authError, response) => {
+      if (authError) {
+        console.error('Redirect Error: ', authError.errorMessage);
+        return;
+      }
 
-      /*for (let rol of this.userRoles) {
-        console.log('rol:', rol);
-      }*/
+      console.log('Redirect Success: ', response.accessToken);
+    });
 
+    this.authService.setLogger(new Logger((logLevel, message, piiEnabled) => {
+      console.log('MSAL Logging: ', message);
+    }, {
+      correlationId: CryptoUtils.createNewGuid(),
+      piiLoggingEnabled: false
+    }));
+  }
+
+  checkoutAccount() {
+    this.loggedIn = !!this.authService.getAccount();
+  }
+
+  login() {
+    const isIE = window.navigator.userAgent.indexOf('MSIE ') > -1 || window.navigator.userAgent.indexOf('Trident/') > -1;
+
+    if (isIE) {
+      this.authService.loginRedirect();
+    } else {
+      this.authService.loginPopup();
     }
   }
 
- /* getRoles(){
-    for (let rol of this.userRoles) {
-      console.log('rol:', rol);
-    }
-
+  logout() {
+    this.authService.logout();
   }
-*/
 
- async doLogout() {
-   console.log('app component - click logout!!)');
-   await this.keycloakService.logout();
-   this.loggedIn = false;
- }
 
- async doLogin() {
-   console.log('app componet - click login!)');
-   await this.keycloakService.login();
- }
 
 }
-

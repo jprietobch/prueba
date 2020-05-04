@@ -1,50 +1,46 @@
-import { NgModule, Component } from '@angular/core';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 
-import { HomeComponent } from './home/home.component';
-import { PublicComponent} from './public/public.component';
-import { PrivateComponent} from './private/private.component';
-import { NotFoundComponent} from './not-found/not-found.component';
+import { HomeComponent} from './modules/general/home/home.component';
+import { ProfileComponent} from './modules/general/profile/profile.component';
+import { NotFoundComponent } from './modules/general/not-found/not-found.component';
+import { PublicComponent } from './modules/general/public/public.component';
+import { PrivateComponent } from './modules/general/private/private.component';
 
-import { AppAuthGuard } from './app.authguard';
-import { AdminComponent } from './admin/admin.component';
+// Azure AD
+import { MsalGuard } from '@azure/msal-angular';
+
 
 
 const routes: Routes = [
   {
-    path: '',
-    redirectTo: '/home',
-    pathMatch: 'full'
+     path: 'profile',
+     component: ProfileComponent,
+     canActivate: [
+       MsalGuard
+     ]
   },
   {
-    path: 'home',
-    component: HomeComponent
+     path: '',
+     component: HomeComponent
   },
-  {
-     path: 'public',
-     component:  PublicComponent,
-  },
-  {
-      path: 'private',
-      component: PrivateComponent,
-      canActivate: [AppAuthGuard],
-      data: {
-        roles: ['User']
-       }
 
+  {
+    path: 'public',
+    component: PublicComponent
+  },
+  // route protegida
+  {
+    path: 'private',
+    component: PrivateComponent,
+    canActivate: [
+      MsalGuard
+    ]
   },
   {
-     path: 'admin',
-     component: AdminComponent,
-     canActivate: [AppAuthGuard],
-     data: {
-       roles: ['AdminWeb']
-      }
-
-  },
-  {
-      path: '**',
-      component: NotFoundComponent
+     path: '**',
+     component: NotFoundComponent
   }
 ];
 
@@ -52,7 +48,6 @@ const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
-  providers: [AppAuthGuard],
   declarations: []
 })
 export class AppRoutingModule { }

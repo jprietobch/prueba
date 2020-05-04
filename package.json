@@ -1,5 +1,5 @@
 {
-  "name": "rhsoo-angular-bch",
+  "name": "pwa-angular-sin-ssr",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -12,16 +12,21 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "~9.0.5",
+    "@angular/cdk": "^9.2.0",
     "@angular/common": "~9.0.5",
     "@angular/compiler": "~9.0.5",
     "@angular/core": "~9.0.5",
     "@angular/forms": "~9.0.5",
+    "@angular/material": "^9.2.0",
     "@angular/platform-browser": "~9.0.5",
     "@angular/platform-browser-dynamic": "~9.0.5",
     "@angular/router": "~9.0.5",
-    "bulma": "^0.8.2",
-    "keycloak-angular": "^7.2.0",
-    "keycloak-js": "^9.0.0",
+    "@angular/service-worker": "~9.0.5",
+    "@azure/msal-angular": "^1.0.0-beta.3",
+    "@fortawesome/fontawesome-free": "^5.13.0",
+    "bootstrap": "^4.4.1",
+    "jquery": "^3.4.1",
+    "msal": "^1.2.2-beta.0",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"

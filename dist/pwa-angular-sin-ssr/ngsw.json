@@ -1,0 +1,126 @@
+{
+  "configVersion": 1,
+  "timestamp": 1585318912654,
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "/favicon.ico",
+        "/index.html",
+        "/main-es2015.ffad37979c05a153f6e8.js",
+        "/main-es5.ffad37979c05a153f6e8.js",
+        "/manifest.webmanifest",
+        "/polyfills-es2015.1f913f16a2d346cc8bdc.js",
+        "/polyfills-es5.1a3c78b07cd6f16c6e9a.js",
+        "/runtime-es2015.0811dcefd377500b5b1a.js",
+        "/runtime-es5.0811dcefd377500b5b1a.js",
+        "/scripts.b2d79a4de8c6fd9ce8a8.js",
+        "/styles.3a1e1b98ab5e32fa4081.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "urls": [
+        "/assets/icons/icon-128x128.png",
+        "/assets/icons/icon-144x144.png",
+        "/assets/icons/icon-152x152.png",
+        "/assets/icons/icon-192x192.png",
+        "/assets/icons/icon-384x384.png",
+        "/assets/icons/icon-512x512.png",
+        "/assets/icons/icon-72x72.png",
+        "/assets/icons/icon-96x96.png",
+        "/assets/ios-add-btn.png",
+        "/assets/ios-menu-btn.png",
+        "/assets/params/css/index.css",
+        "/assets/params/images/logo/Banchile_P.png",
+        "/assets/params/images/logo/angular.png",
+        "/assets/params/images/logo/ganatan.png",
+        "/assets/params/js/index.js",
+        "/fa-brands-400.0cb5a5c0d251c109458c.svg",
+        "/fa-brands-400.13685372945d816a2b47.ttf",
+        "/fa-brands-400.a06da7f0950f9dd366fc.woff2",
+        "/fa-brands-400.c1868c9545d2de1cf848.eot",
+        "/fa-brands-400.ec3cfddedb8bebd2d7a3.woff",
+        "/fa-regular-400.261d666b0147c6c5cda0.eot",
+        "/fa-regular-400.89ffa3aba80d30ee0a93.svg",
+        "/fa-regular-400.c20b5b7362d8d7bb7edd.woff2",
+        "/fa-regular-400.db78b9359171f24936b1.ttf",
+        "/fa-regular-400.f89ea91ecd1ca2db7e09.woff",
+        "/fa-solid-900.1ab236ed440ee51810c5.ttf",
+        "/fa-solid-900.a0369ea57eb6d3843d64.eot",
+        "/fa-solid-900.b15db15f746f29ffa026.woff2",
+        "/fa-solid-900.bea989e82b07e9687c26.woff",
+        "/fa-solid-900.ec763292e583294612f1.svg"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/assets/ios-add-btn.png": "b04f8aff472620d61612217ef4b2cd94f07b914b",
+    "/assets/ios-menu-btn.png": "85935a3142fbdca3ebd69db254792588e3c48b13",
+    "/assets/params/css/index.css": "e1db6f70b5a9e72b21fa43313835ac0a536ec1d4",
+    "/assets/params/images/logo/Banchile_P.png": "075f9c9b06290ff427f94c6484da5218cd5a4d81",
+    "/assets/params/images/logo/angular.png": "f0191f8d50460c560d9e28b29e849b4f44ed0bf4",
+    "/assets/params/images/logo/ganatan.png": "53662e88188be90d80b14ae0d9e8335b0b8ea0a0",
+    "/assets/params/js/index.js": "be45940c9e97b507367c4004b39094e7dd3858b6",
+    "/fa-brands-400.0cb5a5c0d251c109458c.svg": "d49c07aef6414916b3c6860b42b906e39748e842",
+    "/fa-brands-400.13685372945d816a2b47.ttf": "66c86edfd13e63e0e981ce853335c28bc2d20cec",
+    "/fa-brands-400.a06da7f0950f9dd366fc.woff2": "509988477da79c146cb93fb728405f18e923c2de",
+    "/fa-brands-400.c1868c9545d2de1cf848.eot": "a17db2a5a355befd089bb6e7d53c3d501bf9e827",
+    "/fa-brands-400.ec3cfddedb8bebd2d7a3.woff": "8436788e76679c0485b62c80eb7512c6c2e34e88",
+    "/fa-regular-400.261d666b0147c6c5cda0.eot": "6299f0e32575f73d8d897f87ce899827f99e20fe",
+    "/fa-regular-400.89ffa3aba80d30ee0a93.svg": "3372e92825af3975013cece2390f806023b1b05d",
+    "/fa-regular-400.c20b5b7362d8d7bb7edd.woff2": "260bb01acd44d88dcb7f501a238ab968f86bef9e",
+    "/fa-regular-400.db78b9359171f24936b1.ttf": "00f569f7d8ac2497a43b25dc4d3b32213bcea31b",
+    "/fa-regular-400.f89ea91ecd1ca2db7e09.woff": "8469cb3d9c8189fea64f60aef2753509d770b8df",
+    "/fa-solid-900.1ab236ed440ee51810c5.ttf": "ff8f37dfad105796bd924d0db0d37a4ff252618c",
+    "/fa-solid-900.a0369ea57eb6d3843d64.eot": "5be5944a17e8b32589a12fdc2b8a8570c9081db4",
+    "/fa-solid-900.b15db15f746f29ffa026.woff2": "75a88815c47a249eadb5f0edc1675957f860cca7",
+    "/fa-solid-900.bea989e82b07e9687c26.woff": "15c52209092ce0fb7210e40e2a01acc8b4a5c494",
+    "/fa-solid-900.ec763292e583294612f1.svg": "a4115fd7ce47ed2b41f7d4e9e7448f28ba3f7508",
+    "/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "/index.html": "959d6f699a11a92a87dfd2e7877023253944512b",
+    "/main-es2015.ffad37979c05a153f6e8.js": "cd20e1f7180d9121b12786dc982c3fb41a724201",
+    "/main-es5.ffad37979c05a153f6e8.js": "040464d218bc54d8165bb816c43d3ff58559d3e1",
+    "/manifest.webmanifest": "976089298e8671fccd263ec3601de061d5f2b089",
+    "/polyfills-es2015.1f913f16a2d346cc8bdc.js": "72ad4ccc0a3916ae4598199447cdeadd6d380570",
+    "/polyfills-es5.1a3c78b07cd6f16c6e9a.js": "e5472003c8575a8fca7583648df3905038faeb18",
+    "/runtime-es2015.0811dcefd377500b5b1a.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
+    "/runtime-es5.0811dcefd377500b5b1a.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
+    "/scripts.b2d79a4de8c6fd9ce8a8.js": "f93d0bc0eb40ec4151e1b06b6448483d2504acbc",
+    "/styles.3a1e1b98ab5e32fa4081.css": "b25c7b3693797f6499485f4a69e5639391329cb8"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ]
+}

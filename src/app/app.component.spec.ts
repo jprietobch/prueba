@@ -16,16 +16,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'rhsoo-angular-bch'`, () => {
+  it(`should have as title 'pwa-angular-sin-ssr'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('rhsoo-angular-bch');
+    expect(app.title).toEqual('pwa-angular-sin-ssr');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('rhsoo-angular-bch app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('pwa-angular-sin-ssr app is running!');
   });
 });
